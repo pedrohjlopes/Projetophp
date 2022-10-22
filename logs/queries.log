@@ -1,0 +1,99 @@
+2022-10-22 19:16:37 Debug: duration=1 rows=1 SHOW TABLES FROM `app`
+2022-10-22 19:16:47 Debug: duration=1 rows=1 SHOW TABLES FROM `app`
+2022-10-22 19:16:47 Debug: duration=1 rows=7 SHOW FULL COLUMNS FROM `dados`
+2022-10-22 19:16:47 Debug: duration=0 rows=3 SHOW INDEXES FROM `dados`
+2022-10-22 19:16:47 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'app' AND kcu.TABLE_NAME = 'dados' AND rc.TABLE_NAME = 'dados'
+2022-10-22 19:16:47 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'dados'
+2022-10-22 19:16:48 Debug: duration=1 rows=7 SHOW FULL COLUMNS FROM `dados`
+2022-10-22 19:16:48 Debug: duration=0 rows=3 SHOW INDEXES FROM `dados`
+2022-10-22 19:16:48 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'app' AND kcu.TABLE_NAME = 'dados' AND rc.TABLE_NAME = 'dados'
+2022-10-22 19:16:48 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'dados'
+2022-10-22 19:16:57 Debug: duration=1 rows=7 SHOW FULL COLUMNS FROM `dados`
+2022-10-22 19:16:57 Debug: duration=0 rows=3 SHOW INDEXES FROM `dados`
+2022-10-22 19:16:57 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'app' AND kcu.TABLE_NAME = 'dados' AND rc.TABLE_NAME = 'dados'
+2022-10-22 19:16:57 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'dados'
+2022-10-22 19:16:57 Debug: duration=1 rows=0 SELECT Dados.id AS `Dados__id`, Dados.username AS `Dados__username`, Dados.password AS `Dados__password`, Dados.email AS `Dados__email`, Dados.phone AS `Dados__phone`, Dados.created AS `Dados__created`, Dados.modified AS `Dados__modified` FROM dados Dados LIMIT 20 OFFSET 0
+2022-10-22 19:16:57 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM dados Dados
+2022-10-22 19:18:25 Debug: duration=2 rows=0 SELECT 1 AS `existing` FROM dados Dados WHERE Dados.username = 'Pedro' LIMIT 1
+2022-10-22 19:18:25 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM dados Dados WHERE Dados.email = 'pedrohenriquej@gmail.com' LIMIT 1
+2022-10-22 19:18:25 Debug: duration=0 rows=0 BEGIN
+2022-10-22 19:18:25 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM dados Dados WHERE Dados.username = 'Pedro' LIMIT 1
+2022-10-22 19:18:25 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM dados Dados WHERE Dados.email = 'pedrohenriquej@gmail.com' LIMIT 1
+2022-10-22 19:18:25 Debug: duration=4 rows=1 INSERT INTO dados (username, password, email, phone, created, modified) VALUES ('Pedro', '030911', 'pedrohenriquej@gmail.com', '34987003', '2022-10-22 19:18:25', '2022-10-22 19:18:25')
+2022-10-22 19:18:25 Debug: duration=0 rows=0 COMMIT
+2022-10-22 19:18:26 Debug: duration=1 rows=1 SELECT Dados.id AS `Dados__id`, Dados.username AS `Dados__username`, Dados.password AS `Dados__password`, Dados.email AS `Dados__email`, Dados.phone AS `Dados__phone`, Dados.created AS `Dados__created`, Dados.modified AS `Dados__modified` FROM dados Dados LIMIT 20 OFFSET 0
+2022-10-22 19:18:26 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM dados Dados
+2022-10-22 19:18:30 Debug: duration=2 rows=1 SELECT Dados.id AS `Dados__id`, Dados.username AS `Dados__username`, Dados.password AS `Dados__password`, Dados.email AS `Dados__email`, Dados.phone AS `Dados__phone`, Dados.created AS `Dados__created`, Dados.modified AS `Dados__modified` FROM dados Dados WHERE Dados.id = 1 LIMIT 1
+2022-10-22 19:18:37 Debug: duration=1 rows=1 SELECT Dados.id AS `Dados__id`, Dados.username AS `Dados__username`, Dados.password AS `Dados__password`, Dados.email AS `Dados__email`, Dados.phone AS `Dados__phone`, Dados.created AS `Dados__created`, Dados.modified AS `Dados__modified` FROM dados Dados WHERE Dados.id = 1 LIMIT 1
+2022-10-22 19:18:37 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM dados Dados WHERE (Dados.username = 'Pedro' AND NOT (Dados.id = 1)) LIMIT 1
+2022-10-22 19:18:37 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM dados Dados WHERE (Dados.email = 'pedrohenriquej@gmail.com' AND NOT (Dados.id = 1)) LIMIT 1
+2022-10-22 19:18:37 Debug: duration=0 rows=0 BEGIN
+2022-10-22 19:18:37 Debug: duration=6 rows=1 UPDATE dados SET phone = '34987003761' , modified = '2022-10-22 19:18:37' WHERE id = 1
+2022-10-22 19:18:37 Debug: duration=0 rows=0 COMMIT
+2022-10-22 19:18:37 Debug: duration=0 rows=1 SELECT Dados.id AS `Dados__id`, Dados.username AS `Dados__username`, Dados.password AS `Dados__password`, Dados.email AS `Dados__email`, Dados.phone AS `Dados__phone`, Dados.created AS `Dados__created`, Dados.modified AS `Dados__modified` FROM dados Dados LIMIT 20 OFFSET 0
+2022-10-22 19:18:37 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM dados Dados
+2022-10-22 19:26:31 Debug: duration=2 rows=7 SHOW FULL COLUMNS FROM `dados`
+2022-10-22 19:26:31 Debug: duration=6 rows=3 SHOW INDEXES FROM `dados`
+2022-10-22 19:26:31 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'app' AND kcu.TABLE_NAME = 'dados' AND rc.TABLE_NAME = 'dados'
+2022-10-22 19:26:31 Debug: duration=1 rows=1 SHOW TABLE STATUS WHERE Name = 'dados'
+2022-10-22 19:26:31 Debug: duration=0 rows=1 SELECT Dados.id AS `Dados__id`, Dados.username AS `Dados__username`, Dados.password AS `Dados__password`, Dados.email AS `Dados__email`, Dados.phone AS `Dados__phone`, Dados.created AS `Dados__created`, Dados.modified AS `Dados__modified` FROM dados Dados LIMIT 20 OFFSET 0
+2022-10-22 19:26:31 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM dados Dados
+2022-10-22 19:27:16 Debug: duration=1 rows=1 SELECT Dados.id AS `Dados__id`, Dados.username AS `Dados__username`, Dados.password AS `Dados__password`, Dados.email AS `Dados__email`, Dados.phone AS `Dados__phone`, Dados.created AS `Dados__created`, Dados.modified AS `Dados__modified` FROM dados Dados LIMIT 20 OFFSET 0
+2022-10-22 19:27:16 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM dados Dados
+2022-10-22 19:27:21 Debug: duration=1 rows=1 SELECT Dados.id AS `Dados__id`, Dados.username AS `Dados__username`, Dados.password AS `Dados__password`, Dados.email AS `Dados__email`, Dados.phone AS `Dados__phone`, Dados.created AS `Dados__created`, Dados.modified AS `Dados__modified` FROM dados Dados LIMIT 20 OFFSET 0
+2022-10-22 19:27:21 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM dados Dados
+2022-10-22 19:27:34 Debug: duration=1 rows=1 SELECT Dados.id AS `Dados__id`, Dados.username AS `Dados__username`, Dados.password AS `Dados__password`, Dados.email AS `Dados__email`, Dados.phone AS `Dados__phone`, Dados.created AS `Dados__created`, Dados.modified AS `Dados__modified` FROM dados Dados LIMIT 20 OFFSET 0
+2022-10-22 19:27:34 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM dados Dados
+2022-10-22 19:27:37 Debug: duration=1 rows=1 SELECT Dados.id AS `Dados__id`, Dados.username AS `Dados__username`, Dados.password AS `Dados__password`, Dados.email AS `Dados__email`, Dados.phone AS `Dados__phone`, Dados.created AS `Dados__created`, Dados.modified AS `Dados__modified` FROM dados Dados LIMIT 20 OFFSET 0
+2022-10-22 19:27:37 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM dados Dados
+2022-10-22 19:27:38 Debug: duration=0 rows=1 SELECT Dados.id AS `Dados__id`, Dados.username AS `Dados__username`, Dados.password AS `Dados__password`, Dados.email AS `Dados__email`, Dados.phone AS `Dados__phone`, Dados.created AS `Dados__created`, Dados.modified AS `Dados__modified` FROM dados Dados LIMIT 20 OFFSET 0
+2022-10-22 19:27:38 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM dados Dados
+2022-10-22 19:27:40 Debug: duration=0 rows=1 SELECT Dados.id AS `Dados__id`, Dados.username AS `Dados__username`, Dados.password AS `Dados__password`, Dados.email AS `Dados__email`, Dados.phone AS `Dados__phone`, Dados.created AS `Dados__created`, Dados.modified AS `Dados__modified` FROM dados Dados LIMIT 20 OFFSET 0
+2022-10-22 19:27:40 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM dados Dados
+2022-10-22 19:27:41 Debug: duration=0 rows=1 SELECT Dados.id AS `Dados__id`, Dados.username AS `Dados__username`, Dados.password AS `Dados__password`, Dados.email AS `Dados__email`, Dados.phone AS `Dados__phone`, Dados.created AS `Dados__created`, Dados.modified AS `Dados__modified` FROM dados Dados LIMIT 20 OFFSET 0
+2022-10-22 19:27:41 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM dados Dados
+2022-10-22 19:28:37 Debug: duration=1 rows=7 SHOW FULL COLUMNS FROM `dados`
+2022-10-22 19:28:37 Debug: duration=0 rows=3 SHOW INDEXES FROM `dados`
+2022-10-22 19:28:37 Debug: duration=1 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'app' AND kcu.TABLE_NAME = 'dados' AND rc.TABLE_NAME = 'dados'
+2022-10-22 19:28:37 Debug: duration=0 rows=1 SHOW TABLE STATUS WHERE Name = 'dados'
+2022-10-22 19:28:37 Debug: duration=0 rows=1 SELECT Dados.id AS `Dados__id`, Dados.username AS `Dados__username`, Dados.password AS `Dados__password`, Dados.email AS `Dados__email`, Dados.phone AS `Dados__phone`, Dados.created AS `Dados__created`, Dados.modified AS `Dados__modified` FROM dados Dados LIMIT 20 OFFSET 0
+2022-10-22 19:28:37 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM dados Dados
+2022-10-22 19:29:03 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM dados Dados WHERE Dados.username = 'luca' LIMIT 1
+2022-10-22 19:29:03 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM dados Dados WHERE Dados.email = 'lu@gmai.com' LIMIT 1
+2022-10-22 19:29:03 Debug: duration=0 rows=0 BEGIN
+2022-10-22 19:29:03 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM dados Dados WHERE Dados.username = 'luca' LIMIT 1
+2022-10-22 19:29:03 Debug: duration=0 rows=0 SELECT 1 AS `existing` FROM dados Dados WHERE Dados.email = 'lu@gmai.com' LIMIT 1
+2022-10-22 19:29:03 Debug: duration=0 rows=1 INSERT INTO dados (username, password, email, phone, created, modified) VALUES ('luca', '$2y$10$6O07NYIPXIP8VhVskpRSYe7hfneyT4KHz54zXwwShjwHFGoQjyst6', 'lu@gmai.com', '0000', '2022-10-22 19:29:03', '2022-10-22 19:29:03')
+2022-10-22 19:29:03 Debug: duration=0 rows=0 COMMIT
+2022-10-22 19:29:04 Debug: duration=0 rows=2 SELECT Dados.id AS `Dados__id`, Dados.username AS `Dados__username`, Dados.password AS `Dados__password`, Dados.email AS `Dados__email`, Dados.phone AS `Dados__phone`, Dados.created AS `Dados__created`, Dados.modified AS `Dados__modified` FROM dados Dados LIMIT 20 OFFSET 0
+2022-10-22 19:29:04 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM dados Dados
